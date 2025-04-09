@@ -1,4 +1,4 @@
-import { setSide } from "./transient.js"
+import { handleSideChoice } from "./EventListener.js"
 
 export const Sides = async () => {
     const response = await fetch("http://localhost:8088/sides")
@@ -12,5 +12,5 @@ export const Sides = async () => {
     return sidesToJoin
 }
 
-document.addEventListener("change", setSide)
+document.addEventListener("change", handleSideChoice)
 

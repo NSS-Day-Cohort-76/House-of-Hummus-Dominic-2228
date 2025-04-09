@@ -1,23 +1,20 @@
-const transietState = {
+const transientState = {
   id: 0,
-  vegetablesId: 0,
-  sideDishId: 0,
+  vegetableId: 0,
+  sideId: 0,
   entreeId: 0
 }
 
-export const setVeggie = (event) => {
-  const eventTarget = event.target.id
-  transietState.vegetablesId = eventTarget
+export const setVeggie = (veggie) => {
+  transientState.vegetableId = veggie
 }
 
-export const setSide = (event) => {
-  const eventTarget = event.target.id
-  transietState.sideDishId = eventTarget
+export const setSide = (side) => {
+  transientState.sideId = side
 }
 
-export const setEntree = (event) => {
-  const eventTarget = event.target.id
-  transietState.entreeId = eventTarget
+export const setEntree = (entree) => {
+  transientState.entreeId = entree
 }
 
 
@@ -27,7 +24,7 @@ export const placeOrder = async () => {
     headers: {
       "Content-Type" : "application/json"
     },
-    body: JSON.stringify(transietState)
+    body: JSON.stringify(transientState)
   }
   const response = await fetch("http://localhost:8088/purchases", postOptions)
   const customEvent = new CustomEvent("newOrderPlaced")

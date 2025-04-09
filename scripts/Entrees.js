@@ -1,4 +1,4 @@
-import { setEntree } from "./transient.js"
+import { handleEntreeChoice } from "./EventListener.js"
 
 export const Entrees = async () => {
   const response = await fetch('http://localhost:8088/entrees')
@@ -13,4 +13,4 @@ export const Entrees = async () => {
   return entreeToJoin
 }
 
-document.addEventListener("change", setEntree)
+document.addEventListener("change", handleEntreeChoice)
