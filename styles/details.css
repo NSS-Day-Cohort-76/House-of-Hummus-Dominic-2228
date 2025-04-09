@@ -6,7 +6,7 @@
 .options {
     flex-basis: 24%;
     margin: 0 2rem;
-    border: 1px dashed dodgerblue;
+    border: 1px dashed rgb(39, 114, 189);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
@@ -17,3 +17,15 @@
     font-size: 1.1rem;
 }
 
+/* .choose-meal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#meal-tray{
+    display: flex;
+    border: 5px black solid;
+    height: 300px;
+} */
